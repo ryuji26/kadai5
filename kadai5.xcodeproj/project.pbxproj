@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4639E95E26DA5435006B4205 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4639E95D26DA5435006B4205 /* .swiftlint.yml */; };
 		46FB5B8D26D9CFA400EC5CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB5B8C26D9CFA400EC5CFE /* AppDelegate.swift */; };
 		46FB5B8F26D9CFA400EC5CFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB5B8E26D9CFA400EC5CFE /* SceneDelegate.swift */; };
 		46FB5B9126D9CFA400EC5CFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB5B9026D9CFA400EC5CFE /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4639E95D26DA5435006B4205 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		46FB5B8926D9CFA400EC5CFE /* kadai5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kadai5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FB5B8C26D9CFA400EC5CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46FB5B8E26D9CFA400EC5CFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		46FB5B8026D9CFA400EC5CFE = {
 			isa = PBXGroup;
 			children = (
+				4639E95D26DA5435006B4205 /* .swiftlint.yml */,
 				46FB5B8B26D9CFA400EC5CFE /* kadai5 */,
 				46FB5B8A26D9CFA400EC5CFE /* Products */,
 			);
@@ -77,6 +80,7 @@
 				46FB5B8526D9CFA400EC5CFE /* Sources */,
 				46FB5B8626D9CFA400EC5CFE /* Frameworks */,
 				46FB5B8726D9CFA400EC5CFE /* Resources */,
+				4639E95C26DA53E3006B4205 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -124,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4639E95E26DA5435006B4205 /* .swiftlint.yml in Resources */,
 				46FB5B9926D9CFA500EC5CFE /* LaunchScreen.storyboard in Resources */,
 				46FB5B9626D9CFA500EC5CFE /* Assets.xcassets in Resources */,
 				46FB5B9426D9CFA400EC5CFE /* Main.storyboard in Resources */,
@@ -131,6 +136,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4639E95C26DA53E3006B4205 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect --format\n    swiftlint\nelse\n  echo \"warning: Mint not installed, download from https://github.com/yonaskolb/Mint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		46FB5B8526D9CFA400EC5CFE /* Sources */ = {
